@@ -143,9 +143,9 @@ table {
    clear: both;
    text-align: center;
    margin: 0 auto;
-   bottom: 0px;
+   /*bottom: 0px; take this out
    left: 0px;
-   right: 0px;
+   right: 0px;*/
  }
 
  .page-footer__icon-list {
