@@ -2,14 +2,14 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.3.6,
 * Autoprefixer: v10.3.1
-* Browsers: last 4 version
+* Browsers: last 6 version
 */
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-y: auto;
   overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 html {
@@ -92,7 +92,7 @@ main {
 
 .profile {
   max-width: 600px;
-  margin-top: 110px;
+  margin-top: 10%;
   margin-left: 50%;
   text-align: center;
 }
@@ -282,7 +282,7 @@ main {
         top: -10px;
     }
     to {
-        left: calc( 100% + 100px);
+        left: 100%;
     }
 }
 @keyframes starAnimation
