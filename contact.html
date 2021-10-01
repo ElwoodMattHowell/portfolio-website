@@ -43,42 +43,47 @@
     </header>
 
     <main>
-      <h1>Contact</h1>
-      <div>
-          Elwood Howell<br>
-          <a href="tel:7186666899">718.666.6899</a><br>
-          <a href="mailto:elwhwl@gmail.com">elwhwl@gmail.com</a><br>
-          <a href="mailto:elwhwl@gmail.com">Contact Me</a>
+      <div class="contact">
+        <h1 class="contact-title">Contact</h1>
+        <div class=" contact_item contact-info">
+          <div>
+              Elwood Howell<br>
+              <a href="tel:7186666899" target="blank">718.666.6899</a><br>
+              <a href="mailto:elwhwl@gmail.com" target="blank">elwhwl@gmail.com</a><br>
+              <a href="mailto:elwhwl@gmail.com" target="blank">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="contact_item contact-form">
+          <form action="" method="post">
+
+                <label class="standard-label" for="contact-email">Email: </label>
+                <input type="email" id="contact-email" required><br>
+
+                <label class="standard-label" for="contact-phone">Telephone: </label>
+                <input type="tel" id="contact-phone"><br>
+
+                <label class="message_label" for="contact-message">Message: </label>
+                <textarea maxlength="240" id="contact-message"></textarea><br>
+            <input class="button contact_send_message" type="submit" value="Send message">
+          </form>
+        </div>
       </div>
-
-      <form action="" method="post" id="contact-form">
-        <label class="standard-label" for="contact-email">Email: </label>
-        <input type="email" id="contact-email" required>
-
-        <label class="standard-label" for="contact-phone">Telephone: </label>
-        <input type="tel" id="contact-phone">
-
-        <label class="standard-label" for="contact-message">Message: </label>
-        <textarea maxlength="240" id="contact-message"></textarea>
-
-        <input type="submit" value="Send message">
-      </form>
     </main>
 
-    <footer class="page-footer">
-      <p id="page-footer__intro">Find me on</p>
-      <ul class="page-footer__icon-list">
-        <li>
-          <img src="img/github_icon.svg" alt="Github" class="page-footer__item">
-        </li>
-        <li>
-          <img src="img/twitter_icon.svg" alt="Twitter" class="page-footer__item">
-        </li>
-        <li>
-          <img src="img/linkedin_icon.svg" alt="LinkedIn" class="page-footer__item">
-        </li>
-      </ul>
-    </footer>
+    <div class="footer-container">
+      <footer class="page-footer">
+        <h4>Find me on</h4>
+        <ul class="page-footer__icon-list">
+          <li>
+            <img src="img/github_icon.svg" alt="Github" class="page-footer__item">
+          </li>
+          <li>
+            <img src="img/linkedin_icon_3.svg" alt="LinkedIn" class="page-footer__item">
+          </li>
+        </ul>
+      </footer>
+    </div>
 
     <script src="js/tota11y.min.js"></script>
   </body>

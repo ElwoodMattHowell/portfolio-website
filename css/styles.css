@@ -1,9 +1,9 @@
 :root {
   --text-color: white;
   --alt-text-color: #0e0220;
-  --primary-color: #48e0e4; /*#357b70;*/
-  --secondary-color: #e0b354;
-  --font-weight-body: 400;
+  --primary-color: #DF1F2D;/*#48e0e4; #357b70;*/
+  --secondary-color: #447bbe;
+  --font-weight-body: 400px;
   --font-size-body: 18px;
   --color-visited: #e40475;
   --color-active: #489c79;
@@ -19,10 +19,6 @@
   overflow-y: scroll;
 }
 
-html {
-
-}
-
 body {
   background: url(../img/nyc.jpg) no-repeat center center fixed;
   background-size: cover;
@@ -34,11 +30,22 @@ body {
   font-size: var(--font-size-body);
   line-height: 1.6;
   text-align: center;
-  color: var(--text-color)
+  color: var(--text-color);
+  position: relative;
 }
 
-main {
-  flex: 1;
+h1 {
+  margin: 0 auto 20px;
+}
+
+h4 {
+  margin: 0 auto;
+}
+
+.message_label {
+    clear: both;
+    float:left;
+    margin-left: 15px;
 }
 
 a {
@@ -53,18 +60,17 @@ a:hover, a:focus {
   opacity: 0.8;
 }
 
-.cosmic {
-  display: block;
-  width:50px;
-  height: 50px;
-  background-color: #1f8999;
+main {
+  flex: 1;
 }
+
+
 
 .button {
   border: none;
   display: inline-block;
   font-family: inherit;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--alt-text-color);
   text-decoration: none;
   padding: 10px;
@@ -90,8 +96,8 @@ a:hover, a:focus {
 
 .profile {
   max-width: 600px;
-  margin-top: 50px;
-  margin-left: 700px;
+  margin-top: 110px;
+  margin-left: 50%;
   text-align: center;
 }
 
@@ -105,6 +111,7 @@ a:hover, a:focus {
 .page-header {
   display: flex;
   width: 100%;
+  height: 80px;
   padding: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -136,9 +143,16 @@ a:hover, a:focus {
    transition-property: opacity;
  }
 
+.footer-container {
+  display: block;
+  margin: 0 auto 10px;
+  background-color: var(--secondary-color);
+  opacity: .85;
+  height: 95px;
+  border-radius: 50%
+}
  .page-footer {
-   color: white;
-   margin-right: 400px;
+   color: var(--alt-text-color);
  }
 
  .page-footer__icon-list {
@@ -147,13 +161,13 @@ a:hover, a:focus {
    padding: 0 20px;
    justify-content: center;
    list-style-type: none;
-   height: 49px;
+   height: 56.693px;
+   margin-top: 0;
  }
 
  .page-footer__icon-list li {
    display: inline-block;
    margin:0 10px;
-   background-color: white;
    border-radius: 50%;
  }
 
@@ -163,6 +177,7 @@ a:hover, a:focus {
  }
 
  .about-me {
+   margin-top: 50px;
    margin-left: 500px;
    text-align: center;
  }
@@ -170,6 +185,26 @@ a:hover, a:focus {
  .about-list {
    list-style-type: none;
    padding: 0;
+ }
+
+ .contact {
+   margin-left: 50%;
+   margin-top: 70px;
+   display: grid;
+   width: 40%;
+   grid-template-columns: 1fr 1fr;
+ }
+
+ .contact_item {
+ }
+
+ .contact-title {
+   grid-column-start: 1;
+   grid-column-end:3;
+ }
+
+ .contact-form {
+   text-align: right;
  }
 
  .grid {
@@ -331,3 +366,48 @@ a:hover, a:focus {
   top:75%;
 }
 /*shooting star animation end*/
+/* start web animation*/
+.web {
+  position: fixed;
+  top: 55px;
+  left: 185px;
+  width:1px;
+  background-color: gray;
+  animation: increase 9s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes increase {
+    0% {
+      height: 39px;
+    }
+    100% {
+        height: 350px;
+    }
+}
+/*end web starAnimation
+/*start spiderman animation*/
+@keyframes spiderManAnimation {
+  from {
+      left: 160px;
+      top: 55px;
+  }
+  to {
+      left: 160px;
+      top: 350px;
+  }
+}
+
+.spiderman {
+  display: block;
+  width: 50px;
+  height: auto;
+  top: 55px;
+  left: 161px;
+  position: fixed;
+  animation-name: spiderManAnimation;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-duration: 6s;
+}
+/*end spiderman animation*/
