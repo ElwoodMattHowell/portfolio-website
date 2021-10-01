@@ -1,15 +1,10 @@
 :root {
   --text-color: white;
-  --alt-text-color: #0e0220;
-  --primary-color: #DF1F2D;/*#48e0e4; #357b70;*/
-  --secondary-color: #447bbe;
-  --font-weight-body: 400px;
-  --font-size-body: 18px;
-  --color-visited: #e40475;
-  --color-active: #489c79;
-  /*--color-sun-start: #edc655;
-  --color-sun-finish: #f76414;*/
-  --background-color-grid: black;
+  --alt-text-color: black;
+  --primary-color: #e02833;
+  --footer-background-color: rgba(68, 123, 190, 0.85);
+  --button-color: #447bbe;
+  --background-color-grid: rgba(0, 0, 0, .75);
   --font-family-1: "Times New Roman", sans-serif;
 }
 
@@ -17,6 +12,10 @@
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+html {
+  background-color: var(--alt-text-color);
 }
 
 body {
@@ -27,25 +26,14 @@ body {
   min-height: 100vh;
   font-family: var(--font-family-1);
   font-weight: 400;
-  font-size: var(--font-size-body);
+  font-size: 18px;
   line-height: 1.6;
   text-align: center;
   color: var(--text-color);
-  position: relative;
 }
 
 h1 {
   margin: 0 auto 20px;
-}
-
-h4 {
-  margin: 0 auto;
-}
-
-.message_label {
-    clear: both;
-    float:left;
-    margin-left: 15px;
 }
 
 a {
@@ -64,11 +52,12 @@ main {
   flex: 1;
 }
 
+/*class selectors*/
 .button {
   border: none;
   display: inline-block;
   font-family: inherit;
-  background-color: var(--secondary-color);
+  background-color: var(--button-color);
   color: var(--alt-text-color);
   text-decoration: none;
   padding: 10px;
@@ -130,21 +119,16 @@ main {
 
  .navigation-list__item {
    text-decoration: none;
-   transition-duration: 0.5s;
-   transition-property: opacity;
  }
 
 .footer-container {
   display: block;
   margin: 0 auto 10px;
-  background-color: var(--secondary-color);
-  opacity: .85;
+  background-color: var(--footer-background-color);
+  color: #e7e7e7;
   height: 95px;
   border-radius: 50%
 }
- .page-footer {
-   color: var(--alt-text-color);
- }
 
  .page-footer__icon-list {
    display: flex;
@@ -153,12 +137,11 @@ main {
    justify-content: center;
    list-style-type: none;
    height: 56.693px;
-   margin-top: 0;
  }
 
  .page-footer__icon-list li {
    display: inline-block;
-   margin:0 10px;
+   margin: 0 10px;
    border-radius: 50%;
  }
 
@@ -169,7 +152,7 @@ main {
 
  .about-me {
    margin-top: 50px;
-   margin-left: 40%;
+   margin-left: 35%;
    text-align: center;
  }
 
@@ -198,6 +181,12 @@ main {
    text-align: right;
  }
 
+ .message_label {
+     clear: both;
+     float:left;
+     margin-left: 15px;
+ }
+
  .grid {
    width: 60%;
    margin: 0 auto;
@@ -210,9 +199,9 @@ main {
  .grid__item {
    border-radius: 25%;
    background-color: var(--background-color-grid);
-   opacity: .75;
  }
 
+/*responsiveness settings*/
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;

@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.3.6,
 * Autoprefixer: v10.3.1
-* Browsers: last 2 version
+* Browsers: last 4 version
 */
 
 * {
@@ -12,57 +12,69 @@
   overflow-y: scroll;
 }
 
+html {
+  background-color: black;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  background: url(../img/nyc.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  font-family: "Times New Roman", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   text-align: center;
+  color: white;
+}
+
+h1 {
+  margin: 0 auto 20px;
 }
 
 a {
-  color: #357b70;
-}
-
-a:visited {
-  /*visitedlink*/
-  color: #05676e;
-}
-
-a:hover, a:focus {
-  /*No underling when hovering over text*/
+  color: #e02833;
   text-decoration: none;
 }
 
-a:active {
-  /*active link*/
-  color: #489c79
+a:hover, a:focus {
+  /*lets the mouse appear as a hand when hovering over button*/
+  cursor: pointer;
+  /*changes opacity of pointer to 80% when hovering over button*/
+  opacity: 0.8;
 }
 
-/* main {
-  width: 900px;
-  margin: 0 auto;
-} */
-
-table {
-  margin: 0 auto;
-  text-align: center;
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
+/*class selectors*/
 .button {
   border: none;
   display: inline-block;
   font-family: inherit;
-  background-color: #357b70;
-  color: white;
+  background-color: #447bbe;
+  color: black;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
           transition-duration: 0.2s;
   -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
   transition-property: opacity;
+  margin-top: 10px;
 }
 
 .button:hover,
@@ -74,20 +86,15 @@ table {
 }
 
 .logo {
-  width: 250px;
-  height: auto;
+  width: auto;
+  height: 50px;
 }
 
 .profile {
-  max-width: 700px;
-  margin:0 auto;
-}
-
-.profile__portrait {
-  float: left;
-  width: 250px;
-  margin-right: 40px;
-  border-radius: 50%;
+  max-width: 600px;
+  margin-top: 110px;
+  margin-left: 50%;
+  text-align: center;
 }
 
 .page-header {
@@ -95,6 +102,7 @@ table {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 80px;
   padding: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -111,6 +119,7 @@ table {
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: right;
+  margin-right: 10%;
 }
 
 .navigation-list {
@@ -125,28 +134,16 @@ table {
 
  .navigation-list__item {
    text-decoration: none;
-   -webkit-transition-duration: 0.5s;
-           transition-duration: 0.5s;
-   -webkit-transition-property: opacity;
-   transition-property: opacity;
  }
 
- .navigation-list__item:hover,
- .navigation-list__item:focus {
-   /*lets the mouse appear as a hand when hovering over button*/
-   cursor: pointer;
-   /*changes opacity of pointer to 80% when hovering over button*/
-   opacity: 0.8;
- }
-
- .page-footer {
-   clear: both;
-   text-align: center;
-   margin: 0 auto;
-   /*bottom: 0px; take this out
-   left: 0px;
-   right: 0px;*/
- }
+.footer-container {
+  display: block;
+  margin: 0 auto 10px;
+  background-color: rgba(68, 123, 190, 0.85);
+  color: #e7e7e7;
+  height: 95px;
+  border-radius: 50%
+}
 
  .page-footer__icon-list {
    display: -webkit-box;
@@ -158,11 +155,13 @@ table {
        -ms-flex-pack: center;
            justify-content: center;
    list-style-type: none;
+   height: 56.693px;
  }
 
  .page-footer__icon-list li {
    display: inline-block;
-   margin:0 10px;
+   margin: 0 10px;
+   border-radius: 50%;
  }
 
  .page-footer__item:hover, .page-footer__item:focus {
@@ -171,7 +170,8 @@ table {
  }
 
  .about-me {
-   margin: 0 auto;
+   margin-top: 50px;
+   margin-left: 35%;
    text-align: center;
  }
 
@@ -180,16 +180,38 @@ table {
    padding: 0;
  }
 
- .hometown-pic {
-   text-align: center;
+ .contact {
+   margin-left: 50%;
+   margin-top: 70px;
+   display: -ms-grid;
+   display: grid;
+   width: 40%;
+   -ms-grid-columns: 1fr 1fr;
+   grid-template-columns: 1fr 1fr;
  }
 
- /*.portfolio {
-   text-align: center;
- }*/
+ .contact_item {
+ }
+
+ .contact-title {
+   -ms-grid-column: 1;
+       grid-column-start: 1;
+   -ms-grid-column-span:2;
+   grid-column-end:3;
+ }
+
+ .contact-form {
+   text-align: right;
+ }
+
+ .message_label {
+     clear: both;
+     float:left;
+     margin-left: 15px;
+ }
 
  .grid {
-   width: 100%;
+   width: 60%;
    margin: 0 auto;
    text-align: center;
    display: -ms-grid;
@@ -200,87 +222,12 @@ table {
  }
 
  .grid__item {
-   background-color: lightgray;
+   border-radius: 25%;
+   background-color: rgba(0, 0, 0, .75);
  }
 
- @-webkit-keyframes color-change {
-   from {
-     fill: #edc655;
-   }
-   to {
-     fill: #f76414;
-   }
- }
-
- @keyframes color-change {
-   from {
-     fill: #edc655;
-   }
-   to {
-     fill: #f76414;
-   }
- }
-
- .sun {
-   -webkit-animation: 4s color-change infinite alternate linear;
-           animation: 4s color-change infinite alternate linear;
- }
-
- @-webkit-keyframes cloud-move {
-   from {
-     -webkit-transform: translate(0, 50px);
-             transform: translate(0, 50px);
-   }
-   to {
-     -webkit-transform: translate(200px, 50px);
-             transform: translate(200px, 50px);
-   }
- }
-
- @keyframes cloud-move {
-   from {
-     -webkit-transform: translate(0, 50px);
-             transform: translate(0, 50px);
-   }
-   to {
-     -webkit-transform: translate(200px, 50px);
-             transform: translate(200px, 50px);
-   }
- }
-
- @-webkit-keyframes cloud-move-reverse {
-   from {
-     -webkit-transform: translate(446px, 48px);
-             transform: translate(446px, 48px);
-   }
-   to {
-     -webkit-transform: translate(100px, 48px);
-             transform: translate(100px, 48px)
-   }
- }
-
- @keyframes cloud-move-reverse {
-   from {
-     -webkit-transform: translate(446px, 48px);
-             transform: translate(446px, 48px);
-   }
-   to {
-     -webkit-transform: translate(100px, 48px);
-             transform: translate(100px, 48px)
-   }
- }
-
- .cloud-front {
-   -webkit-animation: 30s cloud-move infinite alternate linear;
-           animation: 30s cloud-move infinite alternate linear;
- }
-
- .cloud-back {
-   -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-           animation: 34s cloud-move-reverse infinite alternate linear;
- }
-
-@media all and (max-width: 900px) {
+/*responsiveness settings*/
+@media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
     width: 100%;
@@ -292,14 +239,17 @@ table {
   h1 {
     font-size: 22px;
   }
-  .profile__portrait {
-    float: none;
-    width: 100px;
-    margin: auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    border-radius: 50%;
+  .profile {
+    margin-left: 0;
+  }
+  .about-me {
+    margin-left: 0;
+  }
+  .contact {
+    margin-left: 0;
+  }
+  .page-header {
+    height: auto;
   }
 }
 
@@ -307,6 +257,13 @@ table {
   .grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+  .spiderman {
+    visibility: hidden;
+  }
+
+  .web {
+    visibility: hidden;
   }
 }
 
@@ -316,3 +273,167 @@ table {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/*shooting star animation begin*/
+@-webkit-keyframes starAnimation
+{
+    from {
+        left: -100px;
+        top: -10px;
+    }
+    to {
+        left: calc( 100% + 100px);
+    }
+}
+@keyframes starAnimation
+{
+    from {
+        left: -100px;
+        top: -10px;
+    }
+    to {
+        left: calc( 100% + 100px);
+    }
+}
+
+.star{
+  position:fixed;
+  left:0px;
+  top:50px;
+  width:1px;
+  height:1px;
+  background-color:white;
+  position:fixed;
+  -webkit-animation-name:starAnimation;
+          animation-name:starAnimation;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.star::before{
+  position:absolute;
+  display:block;
+  content:"";
+  width:100px;
+  right:1px;
+  top:0px;
+  height:1px;
+}
+.star-1{
+  -webkit-animation-duration:7s;
+          animation-duration:7s;
+  top:40%;
+}
+.star-2{
+  -webkit-animation-duration:5s;
+          animation-duration:5s;
+  top:45%;
+}
+.star-3{
+  -webkit-animation-duration:8s;
+          animation-duration:8s;
+  top:50%;
+}
+
+.star-4{
+  -webkit-animation-duration:4s;
+          animation-duration:4s;
+  top:55%;
+}
+
+.star-5{
+  -webkit-animation-duration:10s;
+          animation-duration:10s;
+  top:60%;
+}
+
+.star-6{
+  -webkit-animation-duration:13s;
+          animation-duration:13s;
+  top:65%;
+}
+
+.star-7{
+  -webkit-animation-duration:2s;
+          animation-duration:2s;
+  top:70%;
+}
+
+.star-8{
+  -webkit-animation-duration:8s;
+          animation-duration:8s;
+  top:75%;
+}
+/*shooting star animation end*/
+/* start web animation*/
+.web {
+  position: fixed;
+  top: 55px;
+  left: 185px;
+  width:1px;
+  background-color: gray;
+  -webkit-animation: increase 9s;
+          animation: increase 9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes increase {
+    0% {
+      height: 39px;
+    }
+    100% {
+        height: 350px;
+    }
+}
+
+@keyframes increase {
+    0% {
+      height: 39px;
+    }
+    100% {
+        height: 350px;
+    }
+}
+/*end web starAnimation
+/*start spiderman animation*/
+@-webkit-keyframes spiderManAnimation {
+  from {
+      left: 160px;
+      top: 55px;
+  }
+  to {
+      left: 160px;
+      top: 350px;
+  }
+}
+@keyframes spiderManAnimation {
+  from {
+      left: 160px;
+      top: 55px;
+  }
+  to {
+      left: 160px;
+      top: 350px;
+  }
+}
+
+.spiderman {
+  display: block;
+  width: 50px;
+  height: auto;
+  top: 55px;
+  left: 161px;
+  position: fixed;
+  -webkit-animation-name: spiderManAnimation;
+          animation-name: spiderManAnimation;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+/*end spiderman animation*/
