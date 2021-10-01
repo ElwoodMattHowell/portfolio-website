@@ -64,8 +64,6 @@ main {
   flex: 1;
 }
 
-
-
 .button {
   border: none;
   display: inline-block;
@@ -101,13 +99,6 @@ main {
   text-align: center;
 }
 
-.profile__portrait {
-  float: left;
-  width: 250px;
-  margin-right: 40px;
-  border-radius: 50%;
-}
-
 .page-header {
   display: flex;
   width: 100%;
@@ -124,7 +115,7 @@ main {
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
-  margin-right: 100px;
+  margin-right: 10%;
 }
 
 .navigation-list {
@@ -178,7 +169,7 @@ main {
 
  .about-me {
    margin-top: 50px;
-   margin-left: 500px;
+   margin-left: 40%;
    text-align: center;
  }
 
@@ -222,46 +213,7 @@ main {
    opacity: .75;
  }
 
- /*@keyframes color-change {
-   from {
-     fill: var(--color-sun-start);
-   }
-   to {
-     fill: var(--color-sun-finish);
-   }
- }
-
- .sun {
-   animation: 4s color-change infinite alternate linear;
- }
-
- @keyframes cloud-move {
-   from {
-     transform: translate(0, 50px);
-   }
-   to {
-     transform: translate(200px, 50px);
-   }
- }
-
- @keyframes cloud-move-reverse {
-   from {
-     transform: translate(446px, 48px);
-   }
-   to {
-     transform: translate(100px, 48px)
-   }
- }
-
- .cloud-front {
-   animation: 30s cloud-move infinite alternate linear;
- }
-
- .cloud-back {
-   animation: 34s cloud-move-reverse infinite alternate linear;
- }*/
-
-@media all and (max-width: 900px) {
+@media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
     width: 100%;
@@ -273,18 +225,30 @@ main {
   h1 {
     font-size: 22px;
   }
-  .profile__portrait {
-    float: none;
-    width: 100px;
-    margin: auto;
-    justify-content: center;
-    border-radius: 50%;
+  .profile {
+    margin-left: 0;
+  }
+  .about-me {
+    margin-left: 0;
+  }
+  .contact {
+    margin-left: 0;
+  }
+  .page-header {
+    height: auto;
   }
 }
 
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+  .spiderman {
+    visibility: hidden;
+  }
+
+  .web {
+    visibility: hidden;
   }
 }
 
