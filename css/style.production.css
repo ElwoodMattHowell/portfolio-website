@@ -292,7 +292,7 @@ main {
         top: -10px;
     }
     to {
-        left: calc( 100% + 100px);
+        left: 100%;
     }
 }
 
