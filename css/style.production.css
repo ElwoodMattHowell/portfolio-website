@@ -182,31 +182,29 @@ main {
  }
 
  .contact {
-   margin-left: 40%;
+   margin-left: 50%;
    margin-top: 5%;
    display: -ms-grid;
    display: grid;
-   width: 40%;
-   -ms-grid-columns: 1fr 1fr;
-   grid-template-columns: 1fr 1fr;
- }
-
- .contact_item {
+   width: 35%;
+   -ms-grid-columns: 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
  }
 
  .contact-title {
    -ms-grid-column: 1;
        grid-column-start: 1;
-   -ms-grid-column-span:2;
-   grid-column-end:3;
+   -ms-grid-column-span:3;
+   grid-column-end:4;
  }
 
  .contact-form {
    text-align: right;
+   grid-column: 2 / -1;
  }
 
  .message_label {
-    vertical-align: top;
+     vertical-align: top;
  }
 
  .grid {
