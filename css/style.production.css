@@ -8,7 +8,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -ms-overflow-style: auto;
+  -ms-overflow-style: none;
   overflow-y: auto;
   overflow-x: hidden;
 }
