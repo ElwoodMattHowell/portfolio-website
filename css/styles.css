@@ -10,8 +10,6 @@
 
 * {
   box-sizing: border-box;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 html {
@@ -30,6 +28,9 @@ body {
   line-height: 1.6;
   text-align: center;
   color: var(--text-color);
+  -ms-overflow-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -163,7 +164,7 @@ main {
 
  .contact {
    margin-left: 50%;
-   margin-top: 70px;
+   margin-top: 5%;
    display: grid;
    width: 40%;
    grid-template-columns: 1fr 1fr;
