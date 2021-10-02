@@ -8,9 +8,6 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -ms-overflow-style: none;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 html {
@@ -34,6 +31,9 @@ body {
   line-height: 1.6;
   text-align: center;
   color: white;
+  -ms-overflow-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 h1 {
