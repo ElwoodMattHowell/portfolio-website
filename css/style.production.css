@@ -206,9 +206,7 @@ main {
  }
 
  .message_label {
-     clear: both;
-     float:left;
-     margin-left: 15px;
+    vertical-align: top;
  }
 
  .grid {
