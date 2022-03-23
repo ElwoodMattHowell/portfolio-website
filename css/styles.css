@@ -185,17 +185,29 @@ main {
  }
 
  .grid {
-   width: 60%;
+   width: 90%;
    margin: 0 auto;
    text-align: center;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    grid-gap: 20px;
+   justify-content: center;
  }
 
  .grid__item {
-   border-radius: 25%;
+   border-radius: 10%;
    background-color: var(--background-color-grid);
+   padding: 10px
+ }
+
+ .image {
+   object-fit: cover;
+   height: 200px;
+   border-radius: 10%;
+ }
+
+ .image-link:hover {
+   cursor: pointer;
  }
 
 /*responsiveness settings*/
