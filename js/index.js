@@ -1,5 +1,6 @@
 var scroll = true;
 
+//checks for intersectio of spiderman div with "trigger" div.  Spiderman retracts web.
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     const spiderman = document.querySelector('.spiderman');
@@ -20,16 +21,19 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
-
+//calls observer
 observer.observe(document.querySelector('.trigger'));
+// observer.observe(document.querySelector('#work-wrapper'));
+// observer.observe(document.querySelector('#contact-wrapper'));
 
-
+//scrolls to top on page reload
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
 
 window.onscroll = function () { scrollFunction() };
 
+//if scrolled to top, navbar background becomes transparent
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 
@@ -40,13 +44,15 @@ function scrollFunction() {
   }
 }
 
+//nav menu shows when hamburger icon clicked
 function showHamburger() {
   const hamburger = document.querySelector('.hamburger-nav');
-  hamburger.style.display === "none" ? hamburger.style.display = "flex" : hamburger.style.display = "none";
+  hamburger.style.display === "none" || !hamburger.style.display ? hamburger.style.display = "flex" : hamburger.style.display = "none";
 }
 
 window.addEventListener("resize", limitFunc);
 
+//if window is resized checks to see if width is greater than 710px and if it is, hides hamburger nav menu
 function limitFunc() {
   var width = window.innerWidth;
   if (width > 710) {
