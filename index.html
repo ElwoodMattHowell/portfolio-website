@@ -16,6 +16,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" type="text/css" href="css/style.production.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="css/styles.css" /> -->
 
 
 </head>
@@ -267,7 +268,7 @@
     <div class="projects">
       <div class="project-container chat-image-container">
         <h2>Simple Chat App</h2>
-        <img src="img/chat_app.png" alt="simple-chat homepage" class="image-link chat-image" />
+        <img src="img/chat_app.png" alt="simple-chat homepage" class="chat-image" />
       </div>
       <div class="project-container">
         <p>This is a mobile chat app built with Gifted Chat that allows users to chat with each other. The users can
@@ -324,21 +325,20 @@
       <img src="img/new_logo.png" alt="Matt Howell personal logo" class="page-header__item logo">
     </a>
 
+    <a href="javascript:void(0);" class="icon menu-btn" onclick="showHamburger()">
+      <i class="fa fa-bars fa-xl"></i>
+    </a>
+    <li role="presentation">
+      <div class="hamburger-nav">
+        <a class="hamburger-item" href="#about-wrapper">About</a>
+        <a class="hamburger-item" href="#work-wrapper">Work</a>
+        <a class="hamburger-item" href="#contact-wrapper">Contact</a>
+        <a class="hamburger-item" href="https://medium.com/@matt_howell">Blog</a>
+      </div>
+    </li>
+
     <nav class="main-navigation page-header__item">
       <ul role="menubar" class="navigation-list">
-        <li role="presentation">
-          <a href="javascript:void(0);" class="icon menu-btn" onclick="showHamburger()">
-            <i class="fa fa-bars fa-xl"></i>
-          </a>
-        </li>
-        <li role="presentation">
-          <div class="hamburger-nav">
-            <a class="hamburger-item" href="#about-wrapper">About</a>
-            <a class="hamburger-item" href="#work-wrapper">Work</a>
-            <a class="hamburger-item" href="#contact-wrapper">Contact</a>
-            <a class="hamburger-item" href="https://medium.com/@matt_howell">Blog</a>
-          </div>
-        </li>
         <li role="presentation">
           <a href="#about-wrapper" role="menuitem" aria-label="Read more about Matt Howell"
             class="navigation-list__item nav-hidden">About</a>

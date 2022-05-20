@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Lato:wght@300&family=Oleo+Script+Swash+Caps&display=swap');
 
 
@@ -14,6 +21,7 @@
 }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -23,10 +31,58 @@ body {
   width: 100%;
 }
 
+h1 {
+  text-shadow: 2px 2px #e54ed0;
+  font-family: var(--font-family-1);
+  margin: 0 auto 20px;
+  font-size: 60px;
+  Opacity: .9;
+}
+
+h2 {
+  text-shadow: 2px 2px #e54ed0;
+  font-family: var(--font-family-1);
+  font-size: 30px;
+  Opacity: .9;
+}
+
+h3 {
+  font-family: var(--font-family-3);
+}
+
+p {
+  font-family: var(--font-family-3);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: var(--font-family-3);
+}
+
+a:hover,
+a:focus {
+  /*lets the mouse appear as a hand when hovering over button*/
+  cursor: pointer;
+  /*changes opacity of pointer to 80% when hovering over button*/
+  opacity: 0.8;
+}
+
+i {
+  font-size: 65px;
+}
+
+/*Home Page CSS */
+
 .home-wrapper {
   background: url(../img/nyc.jpg) no-repeat center center;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
   font-family: var(--font-family-1);
@@ -53,36 +109,117 @@ body {
   }
 }
 
-h1 {
-  text-shadow: 2px 2px #e54ed0;
-  font-family: var(--font-family-1);
-  margin: 0 auto 20px;
-  font-size: 60px;
+/*shooting star animation begin*/
+@-webkit-keyframes starAnimation {
+  from {
+    left: -100px;
+    top: -10px;
+  }
+
+  to {
+    left: 100%;
+  }
 }
 
-h2 {
-  text-shadow: 2px 2px #e54ed0;
-  font-family: var(--font-family-1);
-  font-size: 30px;
+@keyframes starAnimation {
+  from {
+    left: -100px;
+    top: -10px;
+  }
+
+  to {
+    left: 100%;
+  }
 }
 
-h3 {
-  text-shadow: 2px 2px #e54ed0;
-  font-family: var(--font-family-3);
+.star {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  -webkit-animation-name: starAnimation;
+  animation-name: starAnimation;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
-p {
-  font-family: var(--font-family-3);
+.star::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100px;
+  right: 1px;
+  top: 0px;
+  height: 1px;
 }
 
-.section-title {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.star-1 {
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+  top: 40%;
 }
 
+.star-2 {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  top: 45%;
+}
+
+.star-3 {
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+  top: 50%;
+}
+
+.star-4 {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  top: 55%;
+}
+
+.star-5 {
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  top: 60%;
+}
+
+.star-6 {
+  -webkit-animation-duration: 13s;
+  animation-duration: 13s;
+  top: 65%;
+}
+
+.star-7 {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  top: 70%;
+}
+
+.star-8 {
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+  top: 75%;
+}
+
+/*shooting star animation end*/
+
+/*Home Page CSS ends*/
+
+/*About page begins */
 .about-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #44008b;
   color: var(--text-color);
@@ -91,25 +228,47 @@ p {
 
 .bio {
   margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   /* width: 80%; */
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
 @media all and (max-width: 710px) {
   .bio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 
 .bio-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  /* flex-basis: 100%; */
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 20px;
 }
@@ -117,6 +276,33 @@ p {
 .profile-pic {
   height: 200px;
   border-radius: 50%;
+}
+
+.trigger {
+  margin-top: 40px;
+}
+
+.skills-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.icon-container {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 16.66666666%;
+  flex: 0 0 16.66666666%;
+  padding: 10px;
+  text-align: center;
 }
 
 .download-btn {
@@ -130,9 +316,81 @@ p {
   border: var(--primary-color) solid 2px;
 }
 
-.project-btn {
+/*End About Page */
+
+/*Work page begins*/
+.work-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #9f45b0;
+  height: 100%;
+  color: var(--text-color);
+  font-family: var(--font-family-3);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  width: 100%
+}
+
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: solid 1px var(--text-color);
+  width: 80%;
+}
+
+.project-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+  padding: 40px;
+}
+
+.project-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background-color: #00076f;
   padding: 10px;
@@ -150,81 +408,27 @@ p {
   border: var(--primary-color) solid 2px;
 }
 
-.link-container {
-  display: flex;
-  justify-content: center;
-}
-
-.trigger {
-  margin-top: 40px;
-}
-
-.skills-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.icon-container {
-  flex: 0 0 16.66666666%;
-  padding: 10px;
-  text-align: center;
-}
-
-i {
-  font-size: 65px;
-}
-
-.work-wrapper {
-  display: flex;
-  flex-direction: column;
-  background-color: #9f45b0;
-  height: 100%;
-  color: var(--text-color);
-  font-family: var(--font-family-3);
-  justify-content: center;
-  align-items: center;
-  width: 100%
-}
-
-.projects {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border-top: solid 1px var(--text-color);
-  width: 80%;
-}
-
-@media all and (max-width: 710px) {
-  .projects {
-    flex-direction: column;
-  }
-
-  .image {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.project-container {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-  text-align: left;
-  padding: 40px;
-}
-
 .image {
-  /* object-fit: cover; */
   height: 300px;
+}
+
+.link-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.image-link:hover {
+  border: var(--primary-color) solid 2px;
+  cursor: pointer;
 }
 
 .chat-image {
   border-radius: 20px;
+  -o-object-fit: cover;
   object-fit: cover;
   width: 30%;
   height: auto;
@@ -232,27 +436,62 @@ i {
 
 .chat-image-container {
   text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
+@media all and (max-width: 710px) {
+  .projects {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .image {
+    width: 250px;
+    height: auto;
+  }
+}
+
+/*Work Page CSS ends*/
+
+/*Contact Page CSS*/
+
 .contact-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: #44008b;
   width: 100%;
   height: 500px;
   color: var(--text-color);
   font-family: var(--font-family-3);
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .contact-icon-container {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25;
   flex: 0 0 25;
   padding: 10px;
   text-align: center;
@@ -263,37 +502,16 @@ i {
   padding: 0;
 }
 
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-family: var(--font-family-3);
-}
+/*End Contact page CSS*/
 
-a:hover,
-a:focus {
-  /*lets the mouse appear as a hand when hovering over button*/
-  cursor: pointer;
-  /*changes opacity of pointer to 80% when hovering over button*/
-  opacity: 0.8;
-}
-
-.button:hover,
-.button:focus {
-  /*lets the mouse appear as a hand when hovering over button*/
-  cursor: pointer;
-  /*changes opacity of pointer to 80% when hovering over button*/
-  opacity: 0.8;
-}
-
-.logo {
-  width: auto;
-  height: 50px;
-}
+/*Navbar CSS*/
 
 .page-header {
   width: 100%;
   position: fixed;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 80px;
@@ -302,17 +520,27 @@ a:focus {
   margin-right: 10px;
 }
 
+.logo {
+  width: auto;
+  height: 50px;
+}
+
 .page-header__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 200px;
   flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: right;
   margin-right: 10%;
 }
 
 .navigation-list {
+  width: 100%;
   list-style-type: none;
   /*margin-right: 40px;*/
 }
@@ -327,12 +555,23 @@ a:focus {
 }
 
 .menu-btn {
+  position: fixed;
+  top: 40px;
+  right: 90px;
   display: none;
   color: var(--primary-color);
 }
 
 .hamburger-nav {
+  background-color: black;
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  padding: 0 5px;
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -348,10 +587,6 @@ a:focus {
   .nav-hidden {
     display: none;
   }
-}
-
-.image-link:hover {
-  cursor: pointer;
 }
 
 /*responsiveness settings*/
@@ -371,81 +606,7 @@ a:focus {
   }
 }
 
-/*shooting star animation begin*/
-@keyframes starAnimation {
-  from {
-    left: -100px;
-    top: -10px;
-  }
 
-  to {
-    left: 100%;
-  }
-}
-
-.star {
-  position: absolute;
-  left: 0px;
-  top: 50px;
-  width: 1px;
-  height: 1px;
-  background-color: white;
-  animation-name: starAnimation;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.star::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 100px;
-  right: 1px;
-  top: 0px;
-  height: 1px;
-}
-
-.star-1 {
-  animation-duration: 7s;
-  top: 40%;
-}
-
-.star-2 {
-  animation-duration: 5s;
-  top: 45%;
-}
-
-.star-3 {
-  animation-duration: 8s;
-  top: 50%;
-}
-
-.star-4 {
-  animation-duration: 4s;
-  top: 55%;
-}
-
-.star-5 {
-  animation-duration: 10s;
-  top: 60%;
-}
-
-.star-6 {
-  animation-duration: 13s;
-  top: 65%;
-}
-
-.star-7 {
-  animation-duration: 2s;
-  top: 70%;
-}
-
-.star-8 {
-  animation-duration: 8s;
-  top: 75%;
-}
-
-/*shooting star animation end*/
 /* start web animation*/
 .web {
   position: fixed;
@@ -453,8 +614,20 @@ a:focus {
   left: 185px;
   width: 1px;
   background-color: gray;
+  -webkit-animation: increase 9s;
   animation: increase 9s;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes increase {
+  0% {
+    height: 39px;
+  }
+
+  100% {
+    height: 350px;
+  }
 }
 
 @keyframes increase {
@@ -469,10 +642,24 @@ a:focus {
 
 @media (prefers-reduced-motion: no-preference) {
   .web-up {
+    -webkit-animation-name: decrease;
     animation-name: decrease;
+    -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+  }
+}
+
+@-webkit-keyframes decrease {
+  0% {
+    height: 350px;
+  }
+
+  100% {
+    height: 39px;
   }
 }
 
@@ -488,6 +675,18 @@ a:focus {
 
 /*end web starAnimation
 /*start spiderman animation*/
+@-webkit-keyframes spiderManAnimation {
+  from {
+    left: 160px;
+    top: 55px;
+  }
+
+  to {
+    left: 160px;
+    top: 350px;
+  }
+}
+
 @keyframes spiderManAnimation {
   from {
     left: 160px;
@@ -497,6 +696,18 @@ a:focus {
   to {
     left: 160px;
     top: 350px;
+  }
+}
+
+@-webkit-keyframes spiderManAnimationUp {
+  from {
+    left: 160px;
+    top: 350px;
+  }
+
+  to {
+    left: 160px;
+    top: 55px;
   }
 }
 
@@ -522,19 +733,29 @@ a:focus {
 }
 
 .spiderman-animation {
+  -webkit-animation-name: spiderManAnimation;
   animation-name: spiderManAnimation;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-duration: 6s;
   animation-duration: 6s;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .spiderman-up {
+    -webkit-animation-name: spiderManAnimationUp;
     animation-name: spiderManAnimationUp;
+    -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
   }
 }
 
 /*end spiderman animation*/
+
+/*end Navbar CSS*/
