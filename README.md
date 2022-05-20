@@ -4,3 +4,4 @@ This portfolio website is used to display my work as a web-developer as well as 
 ## Built With
  - HTML
  - CSS
+ - JavaScript
