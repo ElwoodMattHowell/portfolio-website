@@ -302,6 +302,10 @@ i {
   margin: -2px 8px;
 }
 
+#case-study-link {
+  margin-top: 10px;
+}
+
 .image {
   height: 300px;
 }
@@ -662,3 +666,109 @@ i {
 /*end spiderman animation*/
 
 /*end Navbar CSS*/
+
+/* case-study CSS */
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #9f45b0;
+  color: #ffe4f2;
+  padding: 80px;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 10px;
+}
+
+#header h3 {
+  margin-left: 10px;
+}
+
+#heading {
+  margin-top: 100px;
+  text-align: center;
+}
+
+#heading h1 {
+  text-shadow: none;
+  font-size: 45px;
+}
+
+.section {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sectionII {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.section div {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-section {
+  padding: 0 20px;
+}
+
+.image-section {
+  justify-content: center;
+}
+
+.sub-section div h2 {
+  padding: 20px 0 0 0;
+  margin: 0;
+  text-shadow: none;
+}
+
+.subsection div h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.case-study-page-header {
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.cs-image {
+  width: 100%;
+  height: auto;
+}
+
+#case-study-contact {
+  justify-content: center;
+}
+
+@media all and (max-width: 710px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .sectionII {
+    flex-direction: column;
+  }
+
+  #profile-image {
+    margin-top: 40px;
+  }
+}
