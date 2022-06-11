@@ -675,7 +675,7 @@ main {
   min-height: 100vh;
   background-color: #9f45b0;
   color: #ffe4f2;
-  padding: 80px;
+  padding: 0 80px;
 }
 
 #header {
@@ -691,7 +691,7 @@ main {
 }
 
 #heading {
-  margin-top: 100px;
+  margin-top: 140px;
   text-align: center;
 }
 
@@ -757,6 +757,13 @@ main {
 
 #case-study-contact {
   justify-content: center;
+}
+
+#footer {
+  background-color: black;
+  color: #ffe4f2;
+  text-align: center;
+  width: 100%;
 }
 
 @media all and (max-width: 710px) {
