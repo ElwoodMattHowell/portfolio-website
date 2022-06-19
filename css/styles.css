@@ -469,10 +469,12 @@ i {
   text-align: center;
 }
 
-/* #contact-header {
-  margin: 0;
-  padding: 0;
-} */
+#alert {
+  background-color: #9f45b0;
+  padding: 0 20px;
+  border: var(--primary-color) solid 2px;
+  display: none;
+}
 
 .contact form {
   display: flex;

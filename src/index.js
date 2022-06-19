@@ -106,7 +106,21 @@ async function saveMessage(name, email, message) {
     email: email,
     message: message
   });
+
+  //show alert
+  document.getElementById('alert').style.display = "block";
+
+  //hide alert
+  setTimeout(function () {
+    document.getElementById('alert').style.display = "none";
+  }, 3000)
+
+  document.getElementById('name').value = "";
+  document.getElementById('email').value = "";
+  document.getElementById('message').value = "";
 }
+
+
 
 const workTitle = document.querySelector(".work-title");
 const projects = document.querySelector('.project-wrapper')
