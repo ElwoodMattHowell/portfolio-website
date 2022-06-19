@@ -107,3 +107,64 @@ async function saveMessage(name, email, message) {
     message: message
   });
 }
+
+const workTitle = document.querySelector(".work-title");
+const projects = document.querySelector('.project-wrapper')
+
+workTitle.style.opacity = 0;
+workTitle.style.transform = "translateX(-100px)";
+
+projects.style.opacity = 0;
+projects.style.transform = "translateX(100px)"
+
+
+const newObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateX(0)";
+    }
+
+  });
+})
+
+const jsScroll = document.querySelectorAll('.js-scroll');
+
+jsScroll.forEach(element => {
+  newObserver.observe(element);
+})
+
+/*projects slideshow*/
+let slideIndex = 1;
+showSlides(slideIndex);
+
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+prev.addEventListener("click", minusSlides);
+next.addEventListener("click", plusSlides);
+
+// Next/previous controls
+function plusSlides() {
+  showSlides(slideIndex += 1);
+}
+
+function minusSlides() {
+  showSlides(slideIndex -= 1);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "flex";
+  dots[slideIndex - 1].className += " active";
+}

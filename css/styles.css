@@ -257,6 +257,10 @@ i {
   width: 100%
 }
 
+.js-scroll {
+  transition: opacity 1000ms, transform 1000ms;
+}
+
 .section-title {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -279,6 +283,12 @@ i {
   flex: 1;
   text-align: left;
   padding: 40px;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-btn {
@@ -316,8 +326,6 @@ i {
 }
 
 .image-link:hover {
-  border: var(--primary-color) solid 2px;
-  margin: -2px;
   cursor: pointer;
 }
 
@@ -331,6 +339,80 @@ i {
 .chat-image-container {
   text-align: center;
   align-items: center;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  /* margin-top: -22px; */
+  padding: 16px;
+  color: #ffe4f2;
+  /* font-weight: bold;
+  font-size: 18px; */
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 60px;
+  /* border-radius: 3px 0 0 3px; */
+}
+
+.prev {
+  left: 60px;
+}
+
+#dot-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 @media all and (max-width: 710px) {
