@@ -435,6 +435,16 @@ i {
     margin-bottom: 40px;
   }
 
+  .next {
+    right: 0;
+    font-size: 2em;
+  }
+
+  .prev {
+    left: 0;
+    font-size: 2em;
+  }
+
 }
 
 /*Work Page CSS ends*/
